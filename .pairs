@@ -1,0 +1,25 @@
+pairs:
+  yl: Yu-Xi Lim; yuxi
+  dl: Daniel Le; daniel
+  vk: Venkat; venkat
+  tr: Trieu; trieu
+  gr: Gaurav; gaurav
+  kr: Sunil; sunil
+  aa: Ankur Agarwal; ankur
+  ss: Shashank Sharma; shashank
+  sr: Saurabh Rawat; saurabh
+  dk: Daniel Keeney; dkeeney
+  sa: Saiaswin Saikannan; saiaswin
+  pu: Pooja Mulik; poojamulik
+  rv: Ritu Vaswani; ritu
+
+email:
+  prefix: pair
+  domain: fastacash.com
+
+global: true
+~
+~
+~
+~
+".pairs" 20L, 400C
