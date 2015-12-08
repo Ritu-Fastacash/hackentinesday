@@ -12,14 +12,11 @@ pairs:
   sa: Saiaswin Saikannan; saiaswin
   pu: Pooja Mulik; poojamulik
   rv: Ritu Vaswani; ritu
+  se: samuesh; eeswari
 
 email:
   prefix: pair
   domain: fastacash.com
 
 global: true
-~
-~
-~
-~
-".pairs" 20L, 400C
+
