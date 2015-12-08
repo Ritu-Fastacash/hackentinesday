@@ -1,0 +1,37 @@
+
+<content class="fasta-guard">
+<div class="form-holder">
+<img src="img/developer_logo.png" alt="" width="610" height="75" class="header" />
+
+
+
+<input type="url" id="shareLink" class="url" value="" maxlength="1000" autocorrect="off" autocapitalize="none"  placeholder ="paste long URL here" required name="shareLink" /><br>
+
+<prefx-holder><prefix>fasta.link/</prefix>
+
+
+<input type="text" id="shortenLink" class="customise" autocorrect="off" autocapitalize="none" maxlength="10"  placeholder ="customise your URL (optional)" name="shortenLink"/>
+
+</prefx-holder>
+
+    <br clear="all">
+    
+<button id="shortenButton" value="shorten url" class="active" disabled="disabled">{{data.shortenButton}}</button>
+<p class="errorMessage"></p>
+</div>
+
+</div>
+
+<div id="shortened" class="fasta-cut-popup hide">
+<div class="form-holder">
+<img src="img/developer_logo.png" alt="" width="610" height="75" class="header" />
+
+
+<div class="field " ><a class="link" id="fastaLink"></a></div>
+<p></p>
+
+<button class="active popup-done" onclick="fastacut.loadTemplate()" id="startagain">START AGAIN</button>
+
+</div>
+</div>
+</content>

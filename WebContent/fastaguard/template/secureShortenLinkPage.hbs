@@ -1,0 +1,164 @@
+<content class="fasta-guard">
+<div class="form-holder">
+<img src="libs/fastaguard/img/developer_logo.png" alt="" width="610" height="75" class="header" />
+
+
+
+<input type="url" id="shareLink" class="url"  value="" maxlength="1000" autocorrect="off" autocapitalize="none"  placeholder ="paste long URL here" required name="shareLink" /><br>
+
+
+<prefx-holder><prefix>fasta.link/</prefix>
+
+<input type="text" id="shortenLink" value="" class="customise" maxlength="10" autocorrect="off" autocapitalize="none" placeholder ="customise your URL (optional)"  name="shortenLink"/>
+
+</prefx-holder>
+<input class="pin" type="text" value=""  placeholder="enter pin" id="pinfield" readonly></input>
+
+<input class="click" type="text" value=""  placeholder="specify no of clicks" id="clickfield" readonly >
+
+<input class="date" type="text" value=""  placeholder="set expiry date and time" id="datefield"  readonly></input>
+
+
+<button id="secureShortenUrlBtn" disabled="disabled" value="shorten url" class="active" >{{data.shortenButton}}</button>
+<p class="errorMessage" id="errorMessage"></p>
+<br clear="all">
+</div>
+<div id="pin" class="fasta-guard-popup hide">
+<div class="form-holder">
+	<form id="pinForm" name="pinForm" >
+		<input type="number"  name="pin1"   id="password1" value="" maxlength="1" min=0 max=9  autofocus class="pin-input" pattern="[0-9]*" style="-webkit-text-security:disc;">
+		<input type="number" name="pin2"   id="password2" value="" maxlength="1"  min=0 max=9 class="pin-input" pattern="[0-9]*" style="-webkit-text-security:disc;" >
+		<input type="number" name="pin3"   id="password3" value="" maxlength="1" min=0 max=9  class="pin-input" pattern="[0-9]*" style="-webkit-text-security:disc;" >
+		<input type="number" name="pin4"   id="password4" value="" maxlength="1"  min=0 max=9  class="pin-input" pattern="[0-9]*" style="-webkit-text-security:disc;">
+		 <br clear="all">
+		 <button value="shorten url" type="button" class="active popup-done" id="pin_done">DONE</button>
+		 <p id="pinErrorMessage" class="errorMessage"></p>
+	</form>
+	
+</div>
+</div>
+
+<div id="click" class="fasta-guard-popup hide">
+<div class="form-holder">
+	<input class="click" id="clickCountValue" type="number" value="" min=1 placeholder="specifiy no of clicks" ></input>
+    <input type="text" id="unlimitedClicks" class="limit" placeholder="no limit" value="no limit" readonly id="nolimit"></input>
+    <br clear="all">
+    
+	<button value="shorten url" class="active popup-done"  id="limitedClicks">DONE</button>
+	<p id="clickErrorMessage" class="errorMessage"></p>
+</div>
+</div>
+
+<div id="date" class="fasta-guard-popup hide">
+<div class="form-holder">
+	<div class="timezone">
+		<select name="timeZone" id="timeZone">
+			<option value="Etc/GMT+12">International Date Line West(-12:00 GMT)</option>
+			<option value="Pacific/Midway">Midway Island, Samoa(-11:00 GMT)</option>
+			<option value="Pacific/Honolulu">Hawaii(-10:00 GMT)</option>
+			<option value="America/Anchorage">Alaska(-09:00 GMT)</option>
+			<option value="America/Vancouver">Pacific Time (US & Canada)(-08:00 GMT)</option>
+			<option value="America/Tijuana">Tijuana, Baja California(-08:00 GMT)</option>
+			<option value="America/Phoenix">Arizona(-07:00 GMT)</option>
+			<option value="America/Chihuahua">Chihuahua, Chihuahua, Mazatlan(-07:00 GMT)</option>
+			<option value="America/Edmonton">Mountain Time (US & Canada)(-07:00 GMT)</option>
+			<option value="America/Chicago">Central America(-06:00 GMT)</option>
+			<option value="America/Chicago">Central Time (US & Canada)(-06:00 GMT)</option>
+			<option value="America/Mexico_City">Guadalajara, Mexico City, Monterrey(-06:00 GMT)</option>
+			<option value="America/Regina">Saskatchewan(-06:00 GMT)</option>
+			<option value="America/Bogota">Bogota, Lima, Quito, Rio Branco(-05:00 GMT)</option>
+			<option value="America/New_York">Eastern Time (US & Canada)(-05:00 GMT)</option>
+			<option value="America/Indiana/Indianapolis">Indiana (East)(-05:00 GMT)</option>
+			<option value="America/Halifax">Atlantic Time (Canada)(-04:00 GMT)</option>
+			<option value="America/Caracas">Caracas, La Paz(-04:30 GMT)</option>
+			<option value="America/Manaus">Manaus(-04:00 GMT)</option>
+			<option value="America/Santiago">Santiago(-04:00 GMT)</option>
+			<option value="America/St_Johns">Newfoundland(-03:30 GMT)</option>
+			<option value="America/Araguaina">Brasilia(-03:00 GMT)</option>
+			<option value="America/Argentina/Buenos_Aires">Buenos Aires, Georgetown(-03:00 GMT)</option>
+			<option value="Etc/GMT+3">Greenland(-03:00 GMT)</option>
+			<option value="America/Montevideo">Montevideo(-03:00 GMT)</option>
+			<option value="Atlantic/South_Georgia">Mid-Atlantic(-02:00 GMT)</option>
+			<option value="Atlantic/Cape_Verde">Cape Verde Is.(-01:00 GMT)</option>
+			<option value="Atlantic/Azores">Azores(-01:00 GMT)</option>
+			<option value="Africa/Casablanca">Casablanca, Monrovia, Reykjavik(+00:00 GMT)</option>
+			<option value="Etc/GMT">Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London(+00:00 GMT)</option>
+			<option value="Europe/Amsterdam">Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna(+01:00 GMT)</option>
+			<option value="Europe/Belgrade">Belgrade, Bratislava, Budapest, Ljubljana, Prague(+01:00 GMT)</option>
+			<option value="Europe/Brussels">Brussels, Copenhagen, Madrid, Paris(+01:00 GMT)</option>
+			<option value="Europe/Belgrade">Sarajevo, Skopje, Warsaw, Zagreb(+01:00 GMT)</option>
+			<option value="Africa/Algiers">West Central Africa(+01:00 GMT)</option>
+			<option value="Africa/Windhoek">Windhoek(+01:00 GMT)</option>
+			<option value="Asia/Amman">Amman(+02:00 GMT)</option>
+			<option value="Europe/Athens">Athens, Bucharest, Istanbul(+02:00 GMT)</option>
+			<option value="Asia/Beirut">Beirut(+02:00 GMT)</option>
+			<option value="Africa/Cairo">Cairo(+02:00 GMT)</option>
+			<option value="Africa/Harare">Harare, Pretoria(+02:00 GMT)</option>
+			<option value="Europe/Helsinki">Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius(+02:00 GMT)</option>
+			<option value="Asia/Jerusalem">Jerusalem(+02:00 GMT)</option>
+			<option value="Europe/Minsk">Minsk(+02:00 GMT)</option>
+			<option value="Asia/Kuwait">Kuwait, Riyadh, Baghdad(+03:00 GMT)</option>
+			<option value="Europe/Moscow">Moscow, St. Petersburg, Volgograd(+03:00 GMT)</option>
+			<option value="Africa/Nairobi">Nairobi(+03:00 GMT)</option>
+			<option value="Asia/Tehran">Tehran(+03:30 GMT)</option>
+			<option value="Asia/Muscat">Abu Dhabi, Muscat(+04:00 GMT)</option>
+			<option value="Asia/Baku">Baku(+04:00 GMT)</option>
+			<option value="Asia/Tbilisi">Tbilisi(+04:00 GMT)</option>
+			<option value="Asia/Yerevan">Yerevan(+04:00 GMT)</option>
+			<option value="Asia/Kabul">Kabul(+04:30 GMT)</option>
+			<option value="Asia/Yekaterinburg">Yekaterinburg(+05:00 GMT)</option>
+			<option value="Asia/Karachi">Islamabad, Karachi, Tashkent(+05:00 GMT)</option>
+			<option value="Asia/Colombo">Sri Jayawardenapura(+05:30 GMT)</option>
+			<option value="Asia/Kolkata">Chennai, Kolkata, Mumbai, New Delhi(+05:30 GMT)</option>
+			<option value="Asia/Kathmandu">Kathmandu(+05:45 GMT)</option>
+			<option value="Asia/Almaty">Almaty, Novosibirsk(+06:00 GMT)</option>
+			<option value="Asia/Dhaka">Astana, Dhaka(+06:00 GMT)</option>
+			<option value="Asia/Rangoon">Yangon (Rangoon)(+06:30 GMT)</option>
+			<option value="Asia/Bangkok">Bangkok, Hanoi, Jakarta(+07:00 GMT)</option>
+			<option value="Asia/Krasnoyarsk">Krasnoyarsk(+07:00 GMT)</option>
+			<option value="Asia/Chongqing">Beijing, Chongqing, Hong Kong, Urumqi(+08:00 GMT)</option>
+			<option value="Asia/Singapore">Kuala Lumpur, Singapore(+08:00 GMT)</option>
+			<option value="Asia/Irkutsk">Irkutsk, Ulaan Bataar(+08:00 GMT)</option>
+			<option value="Australia/Perth">Perth(+08:00 GMT)</option>
+			<option value="Asia/Taipei">Taipei(+08:00 GMT)</option>
+			<option value="Asia/Tokyo">Osaka, Sapporo, Tokyo(+09:00 GMT)</option>
+			<option value="Asia/Seoul">Seoul(+09:00 GMT)</option>
+			<option value="Asia/Yakutsk">Yakutsk(+09:00 GMT)</option>
+			<option value="Australia/Adelaide">Adelaide(+09:30 GMT)</option>
+			<option value="Australia/Darwin">Darwin(+09:30 GMT)</option>
+			<option value="Australia/Brisbane">Brisbane(+10:00 GMT)</option>
+			<option value="Australia/Sydney">Canberra, Melbourne, Sydney(+10:00 GMT)</option>
+			<option value="Australia/Hobart">Hobart(+10:00 GMT)</option>
+			<option value="Pacific/Guam">Guam, Port Moresby(+10:00 GMT)</option>
+			<option value="Asia/Vladivostok">Vladivostok(+10:00 GMT)</option>
+			<option value="Asia/Magadan">Magadan, Solomon Is., New Caledonia(+11:00 GMT)</option>
+			<option value="Pacific/Auckland">Auckland, Wellington(+12:00 GMT)</option>
+			<option value="Pacific/Fiji">Fiji, Kamchatka, Marshall Is.(+12:00 GMT)</option>
+			<option value="Etc/GMT-13">Nuku'alofa(+13:00 GMT)</option>
+		</select>
+	</div>
+    
+	<input class="date" type="text" value="" id="dateOnExpire" placeholder="set date" onfocus="this.type='date';
+                      this.setAttribute('onfocus','');this.blur();this.focus();"  data-min="2015-10-09"  min="{{data.curDate}}" ></input>
+    
+	<input class="time" type="text" value="" placeholder="set time"  id="timeOnExpire" onfocus="this.type='time';
+                      this.setAttribute('onfocus','');this.blur();this.focus();" ></input>
+    <br clear="all">
+   
+	<button value="shorten url" class="active popup-done"  id="date_done">DONE</button>
+	<p id="timeErrorMessage" class="errorMessage"></p>
+</div> </div>
+
+
+<div id="shortened" class="fasta-guard-popup hide">
+<div class="form-holder">
+<img src="libs/fastaguard/img/developer_logo.png" alt="" width="610" height="75" class="header" />
+
+<div class="field " ><a class="link" id="fastaLink" ></a></div>
+<div class="field "><div class="password">&nbsp;</div><div class="click" id="linkClickCount"></div></div>
+<div class="field "><div class="date" id="linkExpireDate"></div></div>
+<p></p>
+<button class="active popup-done" onclick="fastaguard.loadTemplate()"  id="startagain">START AGAIN</button>
+</div>
+</div>
+</content>

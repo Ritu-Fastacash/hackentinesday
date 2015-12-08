@@ -1,0 +1,43 @@
+
+<div class="fasta-share holder  hide">
+
+<div class="social-icon noselect">
+
+ {{#each  data.social}}
+
+        
+            
+                {{#if this.display}}
+                 
+
+                    <a class="icon" name="socialIcon" href="#" data-socialIcon data-copyenabled="{{this.copyenabled}}"  data-displayname="{{this.name}}" data-appname="{{this.appname}}" ><img  src="{{this.img}}" alt=""/></a>
+
+
+                {{/if}}
+          
+           
+         
+         {{/each}}
+
+
+     </div>
+     <div class="padtop5"></div>
+		<div class="noselect copy-icon-right" id="copyIcon" style="display:none">    
+          <a ><img src="img/copybubble.png"></a>
+       </div> 
+         <div class="padTopBottom10 padlft8 border-top-red">
+	        
+	          <div class="axis-font-white padTopBottom10" >
+             	 <p class="copyLink" data-fastaLink></p>
+         	 </div>
+          	<div class="axis-font-white noselect">
+           		 <span class="grey" id="expiryDate" ></span>
+          	</div>
+        </div> 
+         
+         <div id="shareNow" class="shareNow" style="display:none"> <a id="shareNowApp" data-shareNowApp class="fasta-share button noselect">Share Now</a></div>
+</div>
+ 		
+
+<img class="byfastacash hide" src="img/byfastacash.svg" alt=""/> 
+<div class="fasta-share overlay hide"></div>

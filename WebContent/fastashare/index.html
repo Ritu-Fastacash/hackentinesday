@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- Adding the styles from sdk -->
+<link href="css/fasta-share-style.css" rel="stylesheet" type="text/css" />
+  
+<!-- Don't use them in production -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.js" ></script>
+ 
+<script src="fastashare.js"></script>
+
+<script type="text/javascript">
+fastashare.initWithConfig({
+    "userKey" : "d7e24caad9e862250f85c1605240f1f0",// API Key, provided by Fastacash OpenPlatform
+    "buttonElement" : "btnDiv",                 // Element for adding the "Share" button
+    "initElement" : "data-init",                // Element to inject the templates
+    "url" : "http://fastacash.com",             // URL to be shared by the user
+    "social" : {                                // social apps displayed on the Social Panel
+        1:{
+            "name" : "WhatsApp",
+            "display" : true,
+            "img" : "img/whatsapp.png",
+            "appname" : "whatsapp"
+        },
+        2:{                                     // Order of display of social apps' icon in Social Panel
+            "name" : "Viber",                   // Name of the social app to add
+            "display" : true,                   // Display the apps icon in the Social Panel
+            "img" : "img/viber.png",            // Icon image for the social app
+            "appname" : "viber"                 // Plugin name for the social app
+        },
+        3:{                                     // Order of display of social apps' icon in Social Panel
+            "name" : "facebook",                   // Name of the social app to add
+            "display" : true,                   // Display the apps icon in the Social Panel
+            "img" : "img/fbmessanger.png",            // Icon image for the social app
+            "appname" : "fbweb"                 // Plugin name for the social app
+        },
+        4:{                                     // Order of display of social apps' icon in Social Panel
+            "name" : "skype",                   // Name of the social app to add
+            "display" : true,                   // Display the apps icon in the Social Panel
+            "img" : "img/skype.png",            // Icon image for the social app
+            "appname" : "skype"                 // Plugin name for the social app
+        } 
+    }
+}, function(){
+    // Callback function
+});
+
+fastashare.share({ 
+    "url" : "www.google.com"    // config object
+}, function(fastalink){
+                                // success callback
+}, function(e){
+                                // error callback
+});
+</script>
+</head>
+<body>
+
+<div class="main"  >  
+<div id="container" data-init>
+<div class="shareButton" btnDiv>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>
